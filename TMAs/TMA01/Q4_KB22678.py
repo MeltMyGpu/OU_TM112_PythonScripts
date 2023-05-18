@@ -2,13 +2,13 @@
 
 # INPUT: the grade score for TMA03, a positive integer in the range 0 to 100 inclusive.
 tma03 = 42
-# INPUT: the average score of prevouis TMAs, a positive floating-point number in the range 0.0 to 100.0 inclusive.
+# INPUT: the average score of previous TMAs, a positive floating-point number in the range 0.0 to 100.0 inclusive.
 average = 73.5
 
 ## Test exclusive cases to obtain TM112 result.
 if (tma03 < 30) or (average < 40.0):
     result = 'fail'
-elif (tma03 >= 30) and (40 <= average < 85.0 ):
+elif (tma03 >= 30) and (40 <= average < 85.0):
     result = 'pass'
 else:
     result = 'distinction'
@@ -18,17 +18,11 @@ print(f'The student got a {result}')
 
 
 
-
-
-
-
-
-
 ### TESTING PURPOSES  
 def get_result(tma03:int, average:float):
     if (tma03 < 30) or (average < 40.0):
         result = 'fail'
-    elif (tma03 >= 30) and (40 <= average < 85.0 ):
+    elif (tma03 >= 30) and (40 <= average < 85.0):
         result = 'pass'
     else:
         result = 'distinction'
