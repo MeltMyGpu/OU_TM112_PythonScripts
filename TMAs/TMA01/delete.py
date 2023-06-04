@@ -1,18 +1,19 @@
+input_list1 = [0, 3, 5, 7, 5, 4, 2, 0, -0.2, 22]
+input_list = [5, 4, 2, 22]
 
-seed = 3
-a = 9
-b = 5
-c = 8
-flag = False
+# get count of out of range values
+count = 0
+for number in input_list:
+    if (0.0 > number) or (5.0 < number):
+        count += 1
 
-print(seed)
-while not flag :
-    seed = seed * a
-    seed = seed + b
-    seed = seed % c
-    print(seed)
-    if seed == 3:
-        flag = True
+# get percentage if any out of range exist
+percentage = 0
+if count > 0:
+    percentage = ((count / len(input_list)) * 100)
 
-
-print(pow(2,6) )
+# round down
+import math
+percentage = math.floor(percentage)
+# output
+print(f'{percentage} % of values are outside the range')
